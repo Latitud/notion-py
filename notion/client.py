@@ -281,7 +281,7 @@ class NotionClient(object):
         data = {
             "query": search,
             "parentId": parent_id,
-            "limit": 100,
+            "limit": 400,
             "spaceId": self.current_space.id,
         }
         response = self.post("searchPagesWithParent", data).json()
@@ -295,7 +295,7 @@ class NotionClient(object):
         self,
         query="",
         search_type="BlocksInSpace",
-        limit=100,
+        limit=400,
         sort="Relevance",
         source="quick_find",
         isDeletedOnly=False,
